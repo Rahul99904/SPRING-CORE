@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd"
+  xmlns:p="http://www.springframework.org/schema/p">
+    <!-- services -->
+    <bean class="com.springcore.Student" id="b_student" name="student1">
+        <property name="Student_id">
+            <value>121</value>
+        </property>
+
+        <property name="Student_Name">
+            <value>Rahul</value>
+        </property>
+
+        <property name="Student_class">
+            <value>15</value>
+        </property>
+    </bean>
+    
+        <bean class="com.springcore.Student"  name="student2">
+        <property name="Student_id">
+            <value>91</value>
+        </property>
+
+        <property name="Student_Name">
+            <value>Rohan</value>
+        </property>
+
+        <property name="Student_class">
+            <value>10</value>
+        </property>
+    </bean>
+    
+   	<bean class="com.springcore.Student" name="student3" p:Student_id="10"  p:Student_Name="Bobby"  p:Student_class="30"  />
+   	
+    <!-- Employee class beans here -->
+    
+    <bean class="com.springcore.Employee" name="emp_col1">
+    <property name="emp_name" value="George" />
+    <property name="phone">
+    <list>
+    	<value>151</value>
+    	<value>235</value>
+    	<value>635</value>
+    </list>
+    </property>
+    
+    <property name="address">
+    <set>
+    <value>Hyderabad</value>
+    <value>Delhi</value>
+    <value>Mumbai</value>
+    </set>
+    </property>
+    
+    <property name="courses">
+    <map>
+    <entry key="java" value="201" />
+    <entry key="python" value="602" />
+    <entry key="c++" value="302" />
+    </map>
+    </property>
+    </bean>
+    
+    
+    
+    
+    
+    
+    
+</beans>

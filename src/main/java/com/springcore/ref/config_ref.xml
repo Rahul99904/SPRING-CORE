@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd"
+  xmlns:p="http://www.springframework.org/schema/p">
+    <!-- services -->
+
+    <bean class="com.springcore.ref.B" name="bref" p:id="20" p:name="rahull" />
+    
+    <!-- <bean class="com.springcore.ref.A" name="aref">
+    
+    <property name="id_a" value="30"/>
+    
+    <property name="obj">
+    <ref bean="bref"></ref>
+    </property>
+    
+    </bean> -->
+    
+    <bean class="com.springcore.ref.A" name="aref" p:id_a="30" p:obj-ref="bref"></bean>
+    	 
+        
+    
+</beans>
